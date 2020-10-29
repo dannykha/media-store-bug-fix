@@ -1,5 +1,7 @@
 package Problem3;
 
+import java.util.UUID;
+
 public class BookFiction extends Book {
 
     private int lateFeePerDayInDollar = 2;

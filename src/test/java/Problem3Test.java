@@ -1,17 +1,32 @@
 import Problem3.*;
 import org.junit.Test;
 
+import java.util.UUID;
+
 import static org.junit.Assert.*;
 
 public class Problem3Test {
+
     @Test
     public void catchTheBugInBook() {
-        // quiz
+        Book bo = new BookFiction("t1", "au1", "g1");
+        Book boo = new BookFiction("t2", "au2", "g2");
+        assertFalse(bo.equals(boo));
+        UUID var = UUID.randomUUID();
+        bo.setID(var);
+        boo.setID(var);
+        assertTrue(bo.equals(boo));
     }
 
     @Test
     public void catchTheBugInMovie() {
-        // quiz
+        Movie stranger = new MovieAction("PG13", "ti1");
+        Movie things = new MovieAction("R", "ti3");
+        assertFalse(stranger.equals(things));
+        UUID var = UUID.randomUUID();
+        stranger.setID(var);
+        things.setID(var);
+        assertTrue(stranger.equals(things));
     }
 
     // DO NOT REMOVE OR CHANGE ANYTHING BELOW THIS!
