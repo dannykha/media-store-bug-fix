@@ -1,6 +1,5 @@
 package Problem3;
 
-import java.util.UUID;
 
 public class MovieAction extends Movie {
 
